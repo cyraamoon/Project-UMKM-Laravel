@@ -1,0 +1,75 @@
+/* public/css/bakery.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@400;500;600&display=swap');
+
+:root {
+    --bk-dark:       #0f0703;
+    --bk-dark-2:     #140b05;
+    --bk-dark-3:     #1a0f08;
+    --bk-border:     #3d2510;
+    --bk-brown:      #a07850;
+    --bk-gold:       #d4a96a;
+    --bk-text:       #c0a07a;
+    --bk-muted:      #7a5c3e;
+    --bk-white:      #f5ecd7;
+    --font-display:  'Playfair Display', serif;
+    --font-body:     'Nunito', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bk-dark-3); color: var(--bk-text); }
+
+/* Buttons */
+.btn-bk-primary {
+    background: var(--bk-gold); color: var(--bk-dark); border: none;
+    padding: 8px 20px; border-radius: 8px; font-weight: 700;
+    font-family: var(--font-body); cursor: pointer; transition: opacity 0.2s;
+}
+.btn-bk-primary:hover { opacity: 0.85; }
+
+.btn-bk-outline {
+    background: transparent; color: var(--bk-gold);
+    border: 1px solid var(--bk-border); padding: 6px 14px;
+    border-radius: 8px; font-family: var(--font-body); cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-bk-outline:hover { background: var(--bk-dark-2); }
+
+/* Cards */
+.bk-card {
+    background: var(--bk-dark-2); border: 0.5px solid var(--bk-border);
+    border-radius: 12px; padding: 16px 20px;
+}
+
+/* Tables */
+.bk-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.bk-table th {
+    padding: 10px 14px; text-align: left; color: var(--bk-muted);
+    font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase;
+    border-bottom: 0.5px solid var(--bk-border);
+}
+.bk-table td { padding: 10px 14px; border-bottom: 0.5px solid #2a1608; color: var(--bk-text); }
+.bk-table tr:last-child td { border-bottom: none; }
+.bk-table tbody tr:hover { background: rgba(212,169,106,0.05); }
+
+/* Form inputs */
+.bk-input {
+    background: var(--bk-dark-3); border: 0.5px solid var(--bk-border);
+    border-radius: 8px; padding: 8px 12px; color: var(--bk-text);
+    font-family: var(--font-body); font-size: 14px; width: 100%;
+    transition: border-color 0.2s;
+}
+.bk-input:focus { outline: none; border-color: var(--bk-gold); }
+.bk-label {
+    font-size: 11px; color: var(--bk-muted); text-transform: uppercase;
+    letter-spacing: 1px; display: block; margin-bottom: 4px;
+}
+
+/* Alerts */
+.bk-alert-success { background: #1a2a1a; border: 0.5px solid #3a5a3a; color: #7ac47a; padding: 10px 16px; border-radius: 8px; margin-bottom: 16px; }
+.bk-alert-error   { background: #2a1a1a; border: 0.5px solid #5a3a3a; color: #c47a7a; padding: 10px 16px; border-radius: 8px; margin-bottom: 16px; }
+
+/* Category pills */
+.pill { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.pill-roti    { background: #3d2510; color: #d4a96a; }
+.pill-minuman { background: #1a2a1a; color: #7ac47a; }
+.pill-pastry  { background: #2a1a2a; color: #c47ad4; }

@@ -6,7 +6,6 @@
   <title>Daftar — La Brioche</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  {{-- SweetAlert2 CDN --}}
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
@@ -232,7 +231,7 @@
       fontFamily: "'DM Sans', sans-serif",
     });
 
-    // ── Error validasi registrasi ──
+    // Validasi
     @if ($errors->any())
       swalBrioche.fire({
         icon: 'error',
@@ -242,7 +241,6 @@
       });
     @endif
 
-    // ── Sukses registrasi (jika ada redirect balik dengan session, opsional) ──
     @if (session('success'))
       swalBrioche.fire({
         icon: 'success',

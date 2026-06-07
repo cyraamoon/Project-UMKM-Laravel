@@ -6,11 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>La Brioche - @yield('title', 'Bakery & Coffee')</title>
 
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
-    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
@@ -26,7 +24,6 @@
             color: #4A3520;
         }
 
-        /* Navbar */
         .navbar {
             background: rgba(255, 249, 245, 0.95);
             backdrop-filter: blur(12px);
@@ -130,7 +127,6 @@
 </head>
 <body>
 
-{{-- NAVBAR --}}
 <nav class="navbar">
     <a href="{{ route('landing') }}" class="logo">
         🥐 La Brioche
@@ -177,12 +173,10 @@
     </div>
 </nav>
 
-{{-- MAIN CONTENT --}}
 <main>
     @yield('content')
 </main>
 
-{{-- SweetAlert Notifications --}}
 <script>
     @if(session('success'))
         Swal.fire({

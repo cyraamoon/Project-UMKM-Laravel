@@ -21,7 +21,7 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('produk', 'totalProduk', 'totalTransaksi', 'totalPelanggan'));
     }
 
-    // TAMBAH PRODUK - VERSI PALAMING SIMPLE
+    // tambah produk
    public function storeProduk(Request $request)
 {
     $path = null;

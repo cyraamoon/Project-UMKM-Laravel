@@ -5,18 +5,16 @@
 @section('content')
 <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
 
-    {{-- Breadcrumb --}}
     <div style="margin-bottom: 30px; font-size: 14px; color: #8B7355;">
         <a href="{{ route('landing') }}" style="color: #8B7355; text-decoration: none;">Beranda</a> /
         <a href="{{ route('landing', ['kategori' => $produk->kategori]) }}" style="color: #8B7355; text-decoration: none;">{{ $produk->kategori }}</a> /
         <span style="color: #D4A76A;">{{ $produk->nama_produk }}</span>
     </div>
 
-    {{-- Detail Produk --}}
+ 
     <div style="background: white; border-radius: 20px; border: 1px solid #E8D5B5; overflow: hidden;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 30px;">
 
-            {{-- GAMBAR PRODUK (SERAGAM) --}}
             <div style="background: #FDF7F0; border-radius: 16px; display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 350px;">
                 @if($produk->poto)
                     <img src="{{ asset('storage/'.$produk->poto) }}" alt="{{ $produk->nama_produk }}"
@@ -41,7 +39,6 @@
                 @endif
             </div>
 
-            {{-- INFO PRODUK --}}
             <div>
                 <div style="margin-bottom: 20px;">
                     <span style="display: inline-block; background: #E8D5B5; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 10px;">
@@ -68,7 +65,6 @@
                     <p style="color: #8B7355; line-height: 1.6;">{{ $produk->deskripsi ?? 'Nikmati kelezatan produk premium dari La Brioche. Dibuat dengan bahan berkualitas dan penuh cinta.' }}</p>
                 </div>
 
-                {{-- FORM TAMBAH KE KERANJANG --}}
                 @auth
                     @if($produk->stok > 0)
                         <form action="{{ route('keranjang.tambah', $produk->id) }}" method="POST" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; flex-wrap: wrap;">
@@ -93,13 +89,11 @@
                     </a>
                 @endauth
 
-                {{-- TOMBOL KEMBALI --}}
                 <a href="{{ route('landing') }}" style="color: #D4A76A; text-decoration: none;">← Kembali ke Menu</a>
             </div>
         </div>
     </div>
 
-    {{-- REKOMENDASI PRODUK --}}
     @if(isset($rekomendasi) && $rekomendasi->count() > 0)
     <div style="margin-top: 50px;">
         <h2 style="font-size: 24px; font-weight: bold; color: #5C3D2E; margin-bottom: 20px;">✨ Produk Lainnya</h2>

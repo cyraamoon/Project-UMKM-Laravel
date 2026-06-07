@@ -4,7 +4,6 @@
 
 @section('content')
 <div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px;">
-    {{-- HEADER --}}
     <div style="margin-bottom: 32px;">
         <h1 style="font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #5C3D2E; margin-bottom: 8px;">
             👤 Profil Saya
@@ -14,10 +13,9 @@
 
     <div style="display: grid; grid-template-columns: 320px 1fr; gap: 28px;">
 
-        {{-- SIDEBAR KIRI - Info Profil Ringkas --}}
+     
         <div style="background: white; border-radius: 20px; border: 1px solid #E8D5B5; overflow: hidden; height: fit-content;">
             <div style="background: linear-gradient(135deg, #D4A76A, #C49A5C); padding: 24px; text-align: center;">
-                {{-- FOTO PROFIL --}}
                 <div style="position: relative; width: 100px; height: 100px; margin: 0 auto;">
                     @if($user->foto_profil)
                         <img src="{{ asset('storage/' . $user->foto_profil) }}"
@@ -57,10 +55,9 @@
             </div>
         </div>
 
-        {{-- MAIN CONTENT --}}
+ 
         <div style="display: flex; flex-direction: column; gap: 28px;">
 
-            {{-- FORM EDIT PROFIL --}}
             <div style="background: white; border-radius: 20px; border: 1px solid #E8D5B5; overflow: hidden;">
                 <div style="padding: 16px 20px; background: #FDF7F0; border-bottom: 1px solid #E8D5B5;">
                     <h2 style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #5C3D2E;">
@@ -114,7 +111,6 @@
                         </div>
                     </div>
 
-                    {{-- Ganti Password --}}
                     <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #E8D5B5;">
                         <p style="font-weight: 600; color: #5C3D2E; margin-bottom: 12px; font-size: 14px;">🔒 Ganti Password (opsional)</p>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
@@ -137,7 +133,6 @@
                 </form>
             </div>
 
-            {{-- RIWAYAT TRANSAKSI --}}
             <div style="background: white; border-radius: 20px; border: 1px solid #E8D5B5; overflow: hidden;">
                 <div style="padding: 16px 20px; background: #FDF7F0; border-bottom: 1px solid #E8D5B5;">
                     <h2 style="font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #5C3D2E;">
@@ -189,7 +184,6 @@
     </div>
 </div>
 
-{{-- SweetAlert Notifications --}}
 <script>
     @if(session('success'))
         Swal.fire({
@@ -227,7 +221,6 @@
     @endif
 </script>
 
-{{-- JavaScript untuk cek perubahan --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.querySelector('form[action="{{ route('profile.update') }}"]');

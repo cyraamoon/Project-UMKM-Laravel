@@ -89,7 +89,6 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        // Flash session 'success' → akan ditangkap SweetAlert di halaman landing
         return redirect()->route('landing')
             ->with('success', 'Registrasi berhasil! Selamat datang, ' . $user->nama_lengkap . ' 🎉');
     }

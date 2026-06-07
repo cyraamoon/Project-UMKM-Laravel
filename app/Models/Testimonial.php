@@ -15,7 +15,6 @@ class Testimonial extends Model
         return $this->belongsTo(User::class);
     }
 
-    // Scope untuk mengambil testimonial yang sudah disetujui
     public function scopeApproved($query)
     {
         return $query->where('status', 'approved');

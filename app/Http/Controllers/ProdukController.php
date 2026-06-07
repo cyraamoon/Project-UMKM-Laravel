@@ -134,7 +134,7 @@ class ProdukController extends Controller
         return redirect()->back()->with('success', 'Keranjang dikosongkan!');
     }
 
-    // Dapatkan jumlah item di keranjang (untuk badge)
+    // Dapatkan jumlah item di keranjang 
     public function getCartCount()
     {
         $keranjang = session()->get('keranjang', []);

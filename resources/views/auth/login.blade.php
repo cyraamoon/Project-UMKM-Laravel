@@ -6,7 +6,6 @@
   <title>Masuk — La Brioche</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-  {{-- SweetAlert2 CDN --}}
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
@@ -201,7 +200,7 @@
   </div>
 
   <script>
-    // Kustomisasi tampilan SweetAlert2 sesuai tema La Brioche
+    
     const swalBrioche = Swal.mixin({
       customClass: {
         popup:        'swal-brioche-popup',
@@ -213,7 +212,7 @@
       fontFamily: "'DM Sans', sans-serif",
     });
 
-    // ── Error validasi / login gagal ──
+    //Validasi
     @if ($errors->any())
       swalBrioche.fire({
         icon: 'error',
@@ -223,7 +222,7 @@
       });
     @endif
 
-    // ── Pesan sukses dari session (misal: setelah logout) ──
+    
     @if (session('status'))
       swalBrioche.fire({
         icon: 'success',
@@ -236,8 +235,7 @@
     @endif
   </script>
 
-  {{-- Custom style untuk SweetAlert agar cocok dengan tema --}}
-  <style>
+    <style>
     .swal-brioche-popup {
       border-radius: 12px !important;
       font-family: 'DM Sans', sans-serif !important;

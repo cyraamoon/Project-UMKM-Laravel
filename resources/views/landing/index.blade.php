@@ -6,11 +6,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>La Brioche Cafe</title>
 
-    <!-- Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
-    <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
@@ -475,7 +474,6 @@
             color: var(--brown-warm);
         }
 
-        /* ========== PRODUK (RAPIH & SERAGAM) ========== */
         .products {
             padding: 80px 56px;
         }
@@ -862,7 +860,6 @@
 </head>
 <body>
 
-{{-- NAVBAR --}}
 <nav class="navbar">
     <a href="{{ route('landing') }}" class="logo">
         <div class="logo-icon">🥐</div>
@@ -953,7 +950,6 @@
     </div>
 </section>
 
-{{-- FEATURES SECTION --}}
 <section class="features">
     <div class="section-header">
         <div class="section-subtitle">KENAPA HARUS MEMILIH KAMI</div>
@@ -980,7 +976,6 @@
     </div>
 </section>
 
-{{-- CATEGORIES SECTION (FUNGSIONAL) --}}
 <section class="categories">
     <div class="section-header">
         <div class="section-subtitle">MENU KAMI</div>
@@ -1028,7 +1023,6 @@
     </div>
 </section>
 
-{{-- PRODUCTS SECTION --}}
 <section class="products" id="products">
     <div class="section-header">
         <div class="section-subtitle">OUR SPECIALS</div>
@@ -1112,7 +1106,6 @@
     </div>
 </section>
 
-{{-- TESTIMONIALS --}}
 <section class="testimonials">
     <div class="section-header">
         <div class="section-subtitle">TESTIMONIALS</div>
@@ -1155,7 +1148,6 @@
         @endforelse
     </div>
 
-    {{-- TOMBOL BERIKAN TESTIMONIAL (jika sudah ada testimonial) --}}
     @if($testimonials->count() > 0)
     <div style="text-align: center; margin-top: 40px;">
         @auth
@@ -1171,7 +1163,6 @@
     @endif
 </section>
 
-{{-- CTA --}}
 <section class="cta">
     <h2 class="cta-title">Siap Menikmati Kelezatan?</h2>
     <p class="cta-desc">Pesan sekarang dan rasakan sensasi makanan & kopi terbaik dari La Brioche</p>
@@ -1182,7 +1173,6 @@
     @endauth
 </section>
 
-{{-- FOOTER --}}
 <footer class="footer">
     <div class="footer-grid">
         <div>

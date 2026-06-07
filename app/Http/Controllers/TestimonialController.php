@@ -32,7 +32,7 @@ class TestimonialController extends Controller
         return redirect()->route('landing')->with('success', 'Terima kasih! Testimonial Anda akan ditampilkan setelah disetujui admin.');
     }
 
-    // ==================== ADMIN ====================
+
 
     // Admin: lihat semua testimonial
     public function adminIndex()
